@@ -8,7 +8,9 @@ import sys
 import subprocess
 
 repo_url_list = {"1":"https://svn.jetlive.net:8443/svn/rd/doc/芒果TV全志定制芯片",
-                 "2":"https://svn.jetlive.net:8443/svn/rd/code/广西广电网络机顶盒中间件平台项目/trunk"}
+                 "2":"https://svn.jetlive.net:8443/svn/rd/code/广西广电网络机顶盒中间件平台项目/trunk",
+                 "3":"https://192.168.95.221:8443/svn/标准产品_Android_机顶盒_海思Hi106SA",
+                 "4":"https://svn.jetlive.net:8443/svn/rd/code/广西广电网络机顶盒中间件平台项目/branches/dongliang.wang"}
 
 class repo_list:
     def set_repo_list(self, list):
@@ -18,12 +20,10 @@ class repo_list:
         return self.repo_list
 
     def show_repo_list(self):
-        i = 1
         for k, v in self.repo_list.items():
-            print "repo url number[%d]:" %i
+            print "repo url number[%s]:" %k
             print v
             print
-            i = i+1
             
 
 def help():
