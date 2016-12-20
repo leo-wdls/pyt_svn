@@ -10,7 +10,12 @@ import subprocess
 repo_url_list = {"1":"https://svn.jetlive.net:8443/svn/rd/doc/芒果TV全志定制芯片",
                  "2":"https://svn.jetlive.net:8443/svn/rd/code/广西广电网络机顶盒中间件平台项目/trunk",
                  "3":"https://192.168.95.221:8443/svn/标准产品_Android_机顶盒_海思Hi106SA",
-                 "4":"https://svn.jetlive.net:8443/svn/rd/code/广西广电网络机顶盒中间件平台项目/branches/dongliang.wang"}
+                 "4":"https://svn.jetlive.net:8443/svn/rd/code/广西广电网络机顶盒中间件平台项目/branches/dongliang.wang/trunk",
+                 "5":"https://192.168.95.221:8443/svn/标准产品_android_机顶盒_HI3798CV200/trunk",
+                 "6":"https://192.168.95.221:8443/svn/标准产品_android_机顶盒_晶晨S905_51/trunk",
+                 "7":"https://svn.jetlive.net:8443/svn/rd/code/广西广电网络机顶盒中间件平台项目/branches/tao.yang/trunk"}
+
+repo_url_list_index = ["1","2","3","4","5","6","7"]
 
 class repo_list:
     def set_repo_list(self, list):
@@ -20,11 +25,14 @@ class repo_list:
         return self.repo_list
 
     def show_repo_list(self):
-        for k, v in self.repo_list.items():
-            print "repo url number[%s]:" %k
-            print v
-            print
-            
+        #for k, v in self.repo_list.items():
+        #    print "repo url number[%s]:" %k
+        #    print v
+        #    print
+        for k in repo_url_list_index:
+             print "repo url number[%s]:" %k
+             print repo_url_list[k]    
+             print
 
 def help():
     print "pyt_svn repo_url"
